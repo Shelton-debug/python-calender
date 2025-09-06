@@ -1,23 +1,58 @@
-class vehicles:
-    def __init__(self, name, max_speed, mileage):
-        self.name = name
-        self.max_speed = max_speed
-        self.mileage = mileage
 
-    def seating_capacity(self, capacity=5):
-        return f"The seating capacity of a {self.name} is {capacity} passengers."
+print('simple calculator')
+
+def add(num1, num2):
+    return num1 + num2
+
+def subtract(num1, num2):
     
-class cars(vehicles):
-    def seating_capacity(self, capacity=5):
-        return super().seating_capacity(capacity=capacity)
+    return num1 - num2
+
+def multiply(num1, num2):
     
-class bus(vehicles):
-    def seating_capacity(self, capacity=50):
-        return super().seating_capacity(capacity=capacity)
+    return num1 * num2
+
+def divide(num1, num2):
+    if num2 == 0:
+        return 'Error: Division by zero is not allowed.'
+    return num1 / num2
+
+def exit_program():
+    print('Exiting the program...')
+    exit()
+
+
+while True:
     
-car1 = cars("Audi", 240, 18)
-car2 = cars("BMW", 250, 20)
-bus1 = bus("Volvo", 180, 12)
-print(car1.seating_capacity())
-print(car2.seating_capacity(4))
-print(bus1.seating_capacity())
+    print('1. Addition')
+    print('2. Subtraction')
+    print('3. Multiplication')
+    print('4. Division')
+    print('5. Exit')
+    
+    choice = input('Enter your choice (1-5): ')
+
+    if choice == '1':
+        num1 = float(input('Enter first number: '))
+        num2 = float(input('Enter second number: '))
+
+        print(f'Result: {add(num1, num2)}')
+    elif choice == '2':
+        num1 = float(input('Enter first number: '))
+        num2 = float(input('Enter second number: '))
+
+        print(f'Result: {subtract(num1, num2)}')
+    elif choice == '3':
+        num1 = float(input('Enter first number: '))
+        num2 = float(input('Enter second number: '))
+
+        print(f'Result: {multiply(num1, num2)}')
+    elif choice == '4':
+        num1 = float(input('Enter first number: '))
+        num2 = float(input('Enter second number: '))
+
+        print(f'Result: {divide(num1, num2)}')
+    elif choice == '5':
+        exit_program()
+    else:
+        print('Invalid choice. Please try again.')
