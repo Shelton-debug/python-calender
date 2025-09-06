@@ -1,15 +1,23 @@
-import calendar
+class vehicles:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
 
-def display_calender():
+    def seating_capacity(self, capacity=5):
+        return f"The seating capacity of a {self.name} is {capacity} passengers."
     
-    year = int(input('Enter the year: '))
-    month = int(input('Enter your month: '))
+class cars(vehicles):
+    def seating_capacity(self, capacity=5):
+        return super().seating_capacity(capacity=capacity)
     
-    cal = calendar.TextCalendar(calendar.SUNDAY)
+class bus(vehicles):
+    def seating_capacity(self, capacity=50):
+        return super().seating_capacity(capacity=capacity)
     
-    month_calender = cal.formatmonth(year, month)
-    
-    print(month_calender)
-    
-display_calender()
-print('Thank you for using the calendar program!')
+car1 = cars("Audi", 240, 18)
+car2 = cars("BMW", 250, 20)
+bus1 = bus("Volvo", 180, 12)
+print(car1.seating_capacity())
+print(car2.seating_capacity(4))
+print(bus1.seating_capacity())
