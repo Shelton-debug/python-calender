@@ -1,0 +1,22 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "cSpell.words": [
+        "Decices"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "works",
+            "database": "school",
+            "username": "root"
+        }
+    ]
+}
