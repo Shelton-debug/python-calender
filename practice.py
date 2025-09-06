@@ -12,3 +12,4 @@ def display_calender():
     print(month_calender)
     
 display_calender()
+print('Thank you for using the calendar program!')
