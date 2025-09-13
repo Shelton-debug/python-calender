@@ -1,7 +1,8 @@
 {
     "python.analysis.autoImportCompletions": true,
     "cSpell.words": [
-        "Decices"
+        "Decices",
+        "otieno"
     ],
     "sqltools.connections": [
         {
