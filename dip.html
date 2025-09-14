@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pos machine</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        #status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <div>
+        <h1>POS MACHINE</h1>
+        <p>Welcome to the POS Machine interface.</p>
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <div id="status"></div>
+        <script>
+            document.getElementById('start-button').addEventListener('click', function() {
+                document.getElementById('status').innerText = 'POS Machine Started';
+            });
+
+            document.getElementById('stop-button').addEventListener('click', function() {
+                document.getElementById('status').innerText = 'POS Machine Stopped';
+            });
+        </script>
+    </div>
+</body>
+</html>
