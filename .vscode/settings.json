@@ -1,8 +1,10 @@
 {
     "python.analysis.autoImportCompletions": true,
     "cSpell.words": [
+        "bingwa",
         "Decices",
-        "otieno"
+        "otieno",
+        "sokoni"
     ],
     "sqltools.connections": [
         {
