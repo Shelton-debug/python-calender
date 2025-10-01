@@ -3,62 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>facebook login</title>
+    <title>Document</title>
 </head>
 <body>
+    <script>
+        let button = document.createElement("button");
+        button.innerHTML = "Click Me";
+        button.onclick = function() {
+            alert("Button was clicked!");
+        };
+        document.body.appendChild(button);
+        console.log("Button added to the page.");
+        let resetButton = document.createElement("button");
+        resetButton.innerHTML = "Reset";
+        resetButton.onclick = function() {
+            document.querySelector("form").reset();
+        };
+        document.body.appendChild(resetButton);
+        console.log("Reset button added to the page.");
+    </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            padding: 20px;
-        }
-        h1 {
-            color: #1877f2;
-        }
-        form {
-            max-width: 300px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #1877f2;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #165eab;
-        }
+    h2{
+        color : blue;
+        text-align : center;
+        font :36pt serif ;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px red;
+        font-weight: bold;
+    }
+    hr {
+        border: 2px solid greenyellow;
+    }
+    p {
+        color: darkblue;
+        font-size: 14pt;
+        text-align: left;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        background-size: auto;
+        border-radius: 8px;
+        padding: 5px;
+        margin: auto;
+    }
+    input[type="text"], input[type="date"], textarea {
+        width: 50%;
+        padding: 8px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14pt;
+        box-align: center;
+    }
+    input[type="submit"], input[type="reset"] {
+        background-color: lightblue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14pt;
+        margin-right: 10px;
+        
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background-color: darkblue;
+    }
+    form {
+        margin: 20px;
+        background-color: aliceblue;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+    }
     </style>
-    <h1>facebook login</h1>
-    <form action="https://www.facebook.com/login" method="post">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Login">
-    </form>
-    <p>Note: This is a simulated login form for educational purposes only.</p>
-    <p>Do not enter your real credentials.</p>
+  <form method="post">
+    <h2>let us know about yourself</h2>
+    <hr>
+    <p>name:</p>
+    <input type="text" name="userid" size="25">
+    <p>address:</p>
+    <input type="text" name="address" size="25">
+    <p>pin:</p>
+    <input type="text" name="pin" size="25">
+    <p>phone:</p>
+    <input type="text" name="phone" size="25">
+    <p>date of birth:</p>
+    <input type="date" name="dob" size="25">
+    <p><textarea name="answer" rows="4" cols="60">your comments....</textarea></p>
+    <p><strong>select colour of hair</strong><br> </p>
+    <input type="radio" name="hair_color" value="black"> Black<br>
+    <input type="radio" name="hair_color" value="brown"> Brown<br>
+    <input type="radio" name="hair_color" value="blonde"> Blonde<br>
+    <input type="radio" name="hair_color" value="red"> Red<br>
+    <hr>
+    <input type="submit" name="submit" value="submit">
+    <input type="reset" name="reset" value="reset">
+  </form>
 </body>
 </html>
