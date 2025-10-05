@@ -1,7 +1,3 @@
-from ast import main
-from random import choice
-
-
 class smartdevice:
     def __init__(self, name, device_type, status="off"):
         self.name = name
